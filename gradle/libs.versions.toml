@@ -1,0 +1,13 @@
+[versions]
+paper-api = "1.21.1-R0.1-SNAPSHOT"
+run-paper = "3.0.2"
+commandapi = "10.0.0"
+packetevents = "2.7.0"
+
+[libraries]
+paper-api = { module = "io.papermc.paper:paper-api", version.ref = "paper-api" }
+commandapi = { group = "dev.jorel", name = "commandapi-bukkit-shade-mojang-mapped", version.ref = "commandapi" }
+packetevents = { group = "com.github.retrooper", name = "packetevents-spigot", version.ref = "packetevents" }
+
+[plugins]
+run-paper = { id = "xyz.jpenilla.run-paper", version.ref = "run-paper" }

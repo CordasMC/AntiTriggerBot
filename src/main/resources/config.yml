@@ -1,0 +1,39 @@
+checks:
+  triggerbot:
+    a:
+      enabled: true # Should we perform this check at all?
+      max-violations: 5 # How often does one need to fail to be punished?
+      type: ARMOR_STAND # What entity should we use to bait the player?
+      interval: 400 # How often should we perform this check per player?
+      duration: 35 # How long should the bait entity remain?
+      distance: 2.9 # How far away from a player should the bait entity be spawned?
+      scale: 0.5 # What scale should the entity be? ( This will only be applied if type is set to PLAYER )
+      validation-range: 3.2 # If the checked player is looking at another player who is this amount of blocks away or less, the check will not be performed.
+      materials: # A list of valid items a player will be checked while holding.
+        - wooden_sword
+        - stone_sword
+        - iron_sword
+        - golden_sword
+        - diamond_sword
+        - netherite_sword
+        - wooden_axe
+        - stone_axe
+        - iron_axe
+        - golden_axe
+        - diamond_axe
+        - netherite_axe
+        - bow
+        - crossbow
+        - trident
+        - mace
+      punish: # Which commands should we run to punish the user?
+        - "ban %player% 7d Cheating - Trigger Bot"
+
+settings:
+  messages:
+    violation: "<red><bold>AntiTriggerBot</bold><gray> » <yellow>%player% <gray>has failed: <yellow>%check%"
+    alerts-toggled: "<red><bold>AntiTriggerBot</bold><gray> » <yellow>You've successfully toggled alerts!"
+    reloaded: "<red><bold>AntiTriggerBot</bold><gray> » <yellow>The plugin was reloaded!"
+    violations-reset: "<red><bold>AntiTriggerBot</bold><gray> » <yellow>Violations have been reset!"
+  violations:
+    expiry: 60000 # After how many milliseconds should a violation expire?

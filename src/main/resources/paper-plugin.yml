@@ -1,0 +1,21 @@
+name: AntiTriggerBot
+version: '1.0'
+main: dev.jstus.antitriggerbot.AntiTriggerBotPlugin
+api-version: '1.21'
+loader: dev.jstus.antitriggerbot.bootstrap.PluginLibrariesLoader
+dependencies:
+  server:
+    packetevents:
+      load: BEFORE
+      required: true
+
+permissions:
+  antitriggerbot.alerts:
+    default: op
+    description: Be allowed to receive alerts in chat for when users fail checks
+  antitriggerbot.reload:
+    default: op
+    description: Be allowed to reload the plugin's configuration
+  antitriggerbot.resetviolations:
+    default: op
+    description: Be allowed to reset all violations
